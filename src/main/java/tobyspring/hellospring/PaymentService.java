@@ -6,9 +6,8 @@ import java.time.LocalDateTime;
 
 public class PaymentService {
         private final ExRateProvider exRateProvider;
-        public PaymentService(){
-//            this.exRateProvider = new SimpleExRateProvider(); // 이부분만 수정해서 사용할수이따.
-            this.exRateProvider = new WebApiExRateProvider();
+        public PaymentService(ExRateProvider exRateProvider){
+            this.exRateProvider = exRateProvider;
         }
 
     public Payment prepare(Long orderId, String currency, BigDecimal foreignCurrencyAmount) throws IOException {
