@@ -3,8 +3,8 @@
 provider 필드를 받아주는 부분이 없어서 나오는 error
 
 ```java
-Exception in thread "main" com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "provider" (class tobyspring.hellospring.ExRateData), not marked as ignorable (2 known properties: "rates", "result"])
- at [Source: (String)"{"result":"success","provider":"<https://www.exchangerate-api.com>","documentation":"<https://www.exchangerate-api.com/docs/free","terms_of_use":"https://www.exchangerate-api.com/terms","time_last_update_unix":1731369751,"time_last_update_utc":"Tue>, 12 Nov 2024 00:02:31 +0000","time_next_update_unix":1731456781,"time_next_update_utc":"Wed, 13 Nov 2024 00:13:01 +0000","time_eol_unix":0,"base_code":"USD","rates":{"USD":1,"AED":3.6725,"AFN":68.18752,"ALL":91.859213,"AMD":387.349451,"ANG":1.79,"AOA":92"[truncated 2418 chars]; line: 1, column: 2919] (through reference chain: tobyspring.hellospring.ExRateData["provider"])
+Exception in thread "main" com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "provider" (class tobyspring.hellospring.exrate.ExRateData), not marked as ignorable (2 known properties: "rates", "result"])
+ at [Source: (String)"{"result":"success","provider":"<https://www.exchangerate-api.com>","documentation":"<https://www.exchangerate-api.com/docs/free","terms_of_use":"https://www.exchangerate-api.com/terms","time_last_update_unix":1731369751,"time_last_update_utc":"Tue>, 12 Nov 2024 00:02:31 +0000","time_next_update_unix":1731456781,"time_next_update_utc":"Wed, 13 Nov 2024 00:13:01 +0000","time_eol_unix":0,"base_code":"USD","rates":{"USD":1,"AED":3.6725,"AFN":68.18752,"ALL":91.859213,"AMD":387.349451,"ANG":1.79,"AOA":92"[truncated 2418 chars]; line: 1, column: 2919] (through reference chain: tobyspring.hellospring.exrate.ExRateData["provider"])
 	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
 	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
 	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
@@ -18,8 +18,8 @@ Exception in thread "main" com.fasterxml.jackson.databind.exc.UnrecognizedProper
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740)
-	at tobyspring.hellospring.PaymentService.prepare(PaymentService.java:29)
-	at tobyspring.hellospring.PaymentService.main(PaymentService.java:41)
+	at tobyspring.hellospring.payment.PaymentService.prepare(PaymentService.java:29)
+	at tobyspring.hellospring.payment.PaymentService.main(PaymentService.java:41)
 ```
 
 ## 해결
