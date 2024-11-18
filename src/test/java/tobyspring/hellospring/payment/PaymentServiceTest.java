@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.math.BigDecimal;
 
+// 수동 DI 테스트
 class PaymentServiceTest {
 
     @Test
