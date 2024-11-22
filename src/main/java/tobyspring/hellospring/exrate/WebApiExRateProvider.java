@@ -20,7 +20,7 @@ public class WebApiExRateProvider implements ExRateProvider {
 
     @Override
     public BigDecimal getExRate(String currency) {
-        String url = "https://open.er-api.com/v6/latest/";
+        String url = "https://open.er-api.com/v6/latest/"+currency;
 
         // 콜백을 만들어고, 파라미터를 넘기면서 템플릿에 메소드를 호출한다.
         return runApiForExRate(url, new SimpleApiExecutor());
